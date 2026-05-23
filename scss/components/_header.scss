@@ -1,0 +1,16 @@
+.header {
+  position: fixed; width: 100%; z-index: 1000; background: $white; box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+  &__content { display: flex; align-items: center; justify-content: space-between; padding: 1rem 5rem; @include respond(tab-port) { padding: 0 2rem; } }
+  &__logo-container { display: flex; align-items: center; color: #333; transition: color .3s; &:hover { color: $themeClrPrimary; } }
+  &__logo-img-cont { width: 5rem; height: 5rem; border-radius: 50%; overflow: hidden; margin-right: 1.5rem; background: $themeClrPrimary; @include respond(tab-port) { width: 4.5rem; height: 4.5rem; } }
+  &__logo-img { width: 100%; height: 100%; object-fit: cover; }
+  &__logo-sub { font-size: 1.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  &__links { display: flex; @include respond(phone) { display: none; } }
+  &__link { padding: 3rem 2.5rem; font-size: 1.6rem; color: #333; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; transition: color .3s; &:hover { color: $themeClrPrimary; } }
+  &__main-ham-menu-cont { display: none; width: 3rem; cursor: pointer; @include respond(phone) { display: block; } }
+  &__sm-menu {
+    background: $white; position: absolute; width: 100%; top: 100%; visibility: hidden; opacity: 0; transition: all .3s; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    &--active { visibility: visible; opacity: 1; }
+  }
+  &__sm-menu-link a { display: block; padding: 2.5rem; font-size: 1.6rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid #eee; text-align: right; }
+}

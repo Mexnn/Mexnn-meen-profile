@@ -1,0 +1,15 @@
+.competitions {
+  background: #f9f9f9;
+  &__content { display: flex; flex-direction: column; gap: 5rem; margin-top: 5rem; }
+  &__row {
+    display: flex; align-items: center; gap: 4rem;
+    @include respond(tab-port) { flex-direction: column; text-align: center; }
+  }
+  &__row-img-cont { flex: 1; width: 100%; max-width: 50rem; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  &__row-img { width: 100%; height: auto; display: block; object-fit: cover; }
+  &__row-content {
+    flex: 1.2;
+    &-title { font-size: 2.4rem; font-weight: 700; margin-bottom: 2rem; color: #333; }
+    &-desc { font-size: 1.8rem; line-height: 1.7; color: #666; margin-bottom: 3rem; }
+  }
+}

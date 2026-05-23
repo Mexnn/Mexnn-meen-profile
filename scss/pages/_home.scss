@@ -1,0 +1,21 @@
+.home-hero {
+  color: $white; background: linear-gradient(to right, rgba($themeClrPrimary, 0.8), rgba($themeClrPrimary, 0.8)), url(../../assets/svg/common-bg.svg); background-position: center; height: 100vh; min-height: 80rem; position: relative; display: flex; align-items: center; justify-content: center;
+  @include respond(phone) { height: auto; padding: 15rem 0 10rem; }
+  &__content { max-width: 90rem; width: 92%; margin: auto; text-align: center; }
+  &__info { margin: 3rem auto 5rem; max-width: 80rem; }
+  .text-primary { font-size: 2.2rem; line-height: 1.6; }
+  &__socials { position: absolute; top: 50%; transform: translateY(-50%); border: 2px solid #eee; background: $white; border-radius: 0 8px 8px 0; @include respond(tab-port) { display: none; } }
+  &__mouse-scroll-cont { position: absolute; bottom: 3%; left: 50%; transform: translateX(-50%); @include respond(phone) { display: none; } }
+}
+
+.social-stack {
+  ul li a {
+    display: flex; align-items: center; padding: 1.5rem; transition: background .3s, transform .3s; color: $black;
+    i { font-size: 2rem; width: 2.5rem; text-align: center; }
+    span { display: none; margin-left: 1rem; font-weight: 700; font-size: 1.4rem; }
+    &:hover {
+      background: #f0f0f0;
+      span { display: inline-block; }
+    }
+  }
+}

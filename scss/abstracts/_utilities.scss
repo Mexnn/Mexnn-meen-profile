@@ -1,0 +1,38 @@
+.heading-primary {
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  @include respond(phone) { font-size: 4.5rem; }
+}
+
+.heading-sec {
+  &__mb-bg { margin-bottom: 11rem; @include respond(tab-port) { margin-bottom: 8rem; } }
+  &__mb-med { margin-bottom: 9rem; @include respond(tab-port) { margin-bottom: 8rem; } }
+  &__main {
+    display: block; font-size: 4rem; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-bottom: 3.5rem; position: relative;
+    &--lt { color: $white; &::after { content: ''; background: $white !important; } }
+    &::after {
+      content: ''; position: absolute; top: calc(100% + 1.5rem); height: 5px; width: 3rem; background: $themeClrPrimary; left: 50%; transform: translateX(-50%); border-radius: $commonBorderRadius;
+      @include respond(phone) { top: calc(100% + 1.2rem); }
+    }
+  }
+  &__sub {
+    display: block; text-align: center; color: $textMuted; font-size: 2rem; font-weight: 500; max-width: 80rem; margin: auto; line-height: 1.6;
+    @include respond(phone) { font-size: 1.8rem; }
+    &--lt { color: $textLight; }
+  }
+}
+
+.main-container { max-width: 120rem; margin: auto; width: 92%; }
+.text-center { text-align: center; }
+
+.btn {
+  background: $white; color: #333; text-transform: uppercase; letter-spacing: 2px; display: inline-block; font-weight: 700; border-radius: $commonBorderRadius; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); transition: transform .3s; padding: 1.5rem 4rem; font-size: 1.6rem;
+  &:hover { transform: translateY(-3px); }
+  &--bg { padding: 1.5rem 8rem; }
+  &--theme { background: $themeClrPrimary; color: $white; }
+}
+
+.sec-pad { padding: 12rem 0; @include respond(tab-port) { padding: 8rem 0; } }
+.d-none { display: none !important; }
